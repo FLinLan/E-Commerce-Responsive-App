@@ -21,6 +21,10 @@ const Login = () => {
         })
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     console.log("data login",data)
 
   return (
@@ -31,7 +35,7 @@ const Login = () => {
                     <img src={loginIcons} alt='login icons' />
                 </div>
 
-                <form className='pt-6'>
+                <form className='pt-6 flex flex-col gap-2'>
                     <div className='grid'>
                         <label>Email :</label>
                         <div  className='bg-slate-100 p-2'>
@@ -51,6 +55,7 @@ const Login = () => {
                                 type={showPassword ? "text" : "password"} 
                                 placeholder='enter password' 
                                 value={data.password}
+                                name='password'
                                 onChange={handleOnChange}
                                 className='w-full h-full outline-none bg-transparent'/>
                             <div className='cursor-pointer text-xl' onClick={()=>setShowPassword((prev)=>!prev)}>
