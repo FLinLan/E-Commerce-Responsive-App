@@ -1,12 +1,10 @@
-import SummaryApi from '../apis/SummaryApi';
-
-const backendDomain = "http://localhost:8080"
+const backendDomain = "http://localhost:8080";
 
 const SummaryApi = {
-    signUP : {
-        url : "${backendDomain}/api/signup",
-        method : "post"
+    signUP: {
+        url: `${backendDomain}/api/signup`,
+        method: "post"
     }
-}
+};
 
-export default SummaryApi
+export default SummaryApi;
